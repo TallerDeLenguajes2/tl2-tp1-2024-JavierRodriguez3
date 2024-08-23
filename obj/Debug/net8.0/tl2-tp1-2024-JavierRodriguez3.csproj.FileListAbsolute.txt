@@ -1,0 +1,14 @@
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\bin\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.exe
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\bin\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.deps.json
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\bin\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.runtimeconfig.json
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\bin\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.dll
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\bin\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.pdb
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.GeneratedMSBuildEditorConfig.editorconfig
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.AssemblyInfoInputs.cache
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.AssemblyInfo.cs
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.csproj.CoreCompileInputs.cache
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.dll
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\refint\tl2-tp1-2024-JavierRodriguez3.dll
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.pdb
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.genruntimeconfig.cache
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\ref\tl2-tp1-2024-JavierRodriguez3.dll
