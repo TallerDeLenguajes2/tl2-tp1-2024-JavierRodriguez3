@@ -13,3 +13,18 @@ D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2
 D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.genruntimeconfig.cache
 D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\ref\tl2-tp1-2024-JavierRodriguez3.dll
 D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.sourcelink.json
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\bin\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.exe
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\bin\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.deps.json
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\bin\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.runtimeconfig.json
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\bin\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.dll
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\bin\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.pdb
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.GeneratedMSBuildEditorConfig.editorconfig
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.AssemblyInfoInputs.cache
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.AssemblyInfo.cs
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.csproj.CoreCompileInputs.cache
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.sourcelink.json
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.dll
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\refint\tl2-tp1-2024-JavierRodriguez3.dll
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.pdb
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.genruntimeconfig.cache
+C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\ref\tl2-tp1-2024-JavierRodriguez3.dll

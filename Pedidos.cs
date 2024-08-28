@@ -30,4 +30,8 @@ public class Pedido{
     public void VerDatosCliente(Cliente Cliente){
         Console.WriteLine($"El nombre del cliente es: {cliente.Nombre}\nEl telefono del cliente es: {cliente.Telefono}\nLa referencia de la direccion del cliente es: {cliente.ReferenciaDireccion}");
     }
+
+    
+
+
     }

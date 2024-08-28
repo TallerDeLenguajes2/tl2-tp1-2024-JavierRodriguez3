@@ -1,5 +1,6 @@
 namespace Cadeterias;
 using Cadetes;
+using Clientes;
 using Pedidos;
 
 
@@ -39,17 +40,40 @@ public class Cadeteria{
 
     }
 
-    public void ReasignarPedido(Pedido pedido, Cadete Ncadete){
-        foreach(var cadete in ListaCadete){
-            if (cadete.ListaPedido.Contains(pedido)){
-                cadete.EliminarPedido(pedido);
-            }
-            else{
-                Console.WriteLine("El pedido no estaba asignado");
-            }
+        public void ReasignarPedido(Pedido pedido, Cadete cadete, Cadeteria laCadeteria){
+            Console.WriteLine($"{cadete.Nombre} nombre del cadete");
+            cadete.EliminarPedido(pedido);
+
+            Cadete nCadete = laCadeteria.ListaCadete[random.Next(laCadeteria.ListaCadete.Count)];
+            Console.WriteLine($"{nCadete.Nombre} nombre del nuevo cadete");
+
+            nCadete.AgregarPedido(pedido);
+            Console.WriteLine($"El pedido fue reasigando al cadete {cadete.Nombre}");
         }
-        Ncadete.AgregarPedido(pedido);
-        Console.WriteLine($"El pedido fue reasigando al cadete {Ncadete.Nombre}");
+
+    public Pedido DarDeAltaPedido(){
+        Console.WriteLine("Ingresar el numero del pedido");
+        int numPed = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Ingresar las observaciones del pedido");
+        string obs = Console.ReadLine();
+
+        Console.WriteLine("Ingresar nombre del clinete");
+        string nombreClie = Console.ReadLine();
+
+        Console.WriteLine("Ingresar direccion del cliente");
+        string direClie = Console.ReadLine();
+
+        Console.WriteLine("Ingresar telefono del cliente");
+        string telClient = Console.ReadLine();
+
+        Console.WriteLine("Ingresar referencias de la direccion del cliente");
+        string direRefClie = Console.ReadLine();
+
+        var cliente = new Cliente(nombreClie, direClie, telClient, direRefClie);
+        return new Pedido(numPed, obs, cliente, Estado.Pendiente);
     }
 
+
 }
+

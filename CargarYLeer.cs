@@ -63,4 +63,40 @@ public class LecturaCsv
 
         return miCadeteria;
     }
+
+    public static void AgregarPedidoAlCSV(string rutaArchivo, Pedido pedido)
+{
+    List<string> lineas = new List<string>();
+
+    // Leer todas las líneas del archivo CSV
+    using (StreamReader archivo = new StreamReader(rutaArchivo))
+    {
+        string linea;
+        while ((linea = archivo.ReadLine()) != null)
+        {
+            lineas.Add(linea);
+        }
+    }
+
+    // Buscar y modificar la línea correspondiente al pedido
+    for (int i = 0; i < lineas.Count; i++)
+    {
+        string[] fila = lineas[i].Split(',');
+        // Actualizar solo el estado del pedido en la línea
+        fila[10] = pedido.Estado.ToString();
+        lineas[i] = string.Join(",", fila);
+        break; // Salir del bucle después de encontrar y modificar el pedido
+    }
+
+    // Sobrescribir el archivo CSV con las líneas modificadas
+    using (StreamWriter archivo = new StreamWriter(rutaArchivo, false))
+    {
+        foreach (string linea in lineas)
+        {
+            archivo.WriteLine(linea);
+        }
+    }
+}
+  //Queda como ejemplo para cargar un csv
+
 }
