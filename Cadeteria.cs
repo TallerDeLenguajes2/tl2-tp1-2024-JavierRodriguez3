@@ -48,7 +48,7 @@ public class Cadeteria{
             Console.WriteLine($"{nCadete.Nombre} nombre del nuevo cadete");
 
             nCadete.AgregarPedido(pedido);
-            Console.WriteLine($"El pedido fue reasigando al cadete {cadete.Nombre}");
+            Console.WriteLine($"El pedido fue reasigando al cadete {nCadete.Nombre}");
         }
 
     public Pedido DarDeAltaPedido(){

@@ -6,7 +6,7 @@ Cadeteria miCadeteria = new Cadeteria();
 List<Pedido> pedidosSinAsignar = new List<Pedido>();
 List<Pedido> pedidosAsignados = new List<Pedido>();
 
-miCadeteria = LecturaCsv.TraerDatosDeCsv(@"C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\CSV\Cadetes.csv", @"C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\CSV\Cadeteria.csv", miCadeteria);
+miCadeteria = LecturaCsv.TraerDatosDeCsv(@"D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\CSV\Cadetes.csv", @"D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\CSV\Cadeteria.csv", miCadeteria);
 
 Console.WriteLine($"{miCadeteria.Nombre}");
 
@@ -76,12 +76,12 @@ switch (opcion)
             if (pedidoEncontrado.Estado == Estado.Entregado)
             {
                 pedidoEncontrado.Estado = Estado.Pendiente;
-                LecturaCsv.AgregarPedidoAlCSV(@"C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\CSV\Cadetes.csv", pedidoEncontrado);
+                LecturaCsv.AgregarPedidoAlCSV(@"D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\CSV\Cadetes.csv", pedidoEncontrado);
             }
             else
             {
                 pedidoEncontrado.Estado = Estado.Entregado;
-                LecturaCsv.AgregarPedidoAlCSV(@"C:\AAAFacultad\Taller2\tl2-tp1-2024-JavierRodriguez3\CSV\Cadetes.csv", pedidoEncontrado);
+                LecturaCsv.AgregarPedidoAlCSV(@"D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\CSV\Cadetes.csv", pedidoEncontrado);
             }
         }
         else
@@ -91,20 +91,15 @@ switch (opcion)
         break;
     case 4:
 
-        Cadete cadeteEncontrado = null;
         Console.WriteLine("Ingresar numero de pedido a cambiar de cadete");
         int nPedN = int.Parse(Console.ReadLine());
 
         Console.WriteLine("Ingresar ID del cadete a entregar pedido");
         int ID = int.Parse(Console.ReadLine());
 
-        Pedido pedidoEncontradoCambiar = null; 
-        
         // Uso de LINQ fuera del bucle
-        pedidoEncontradoCambiar = pedidosAsignados.FirstOrDefault(c => c.NumPedido == nPedN);
-        cadeteEncontrado = miCadeteria.ListaCadete.FirstOrDefault(c => c.Id == ID);
-
-        Console.WriteLine($"{cadeteEncontrado.Nombre} nombre del cadete encontrado");
+        Pedido pedidoEncontradoCambiar = pedidosAsignados.FirstOrDefault(c => c.NumPedido == nPedN);
+        Cadete cadeteEncontrado = miCadeteria.ListaCadete.FirstOrDefault(x => x.Id == ID);
 
         miCadeteria.ReasignarPedido(pedidoEncontradoCambiar, cadeteEncontrado, miCadeteria);
 
