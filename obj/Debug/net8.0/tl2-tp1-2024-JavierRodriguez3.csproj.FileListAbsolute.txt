@@ -12,3 +12,4 @@ D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2
 D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.pdb
 D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.genruntimeconfig.cache
 D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\ref\tl2-tp1-2024-JavierRodriguez3.dll
+D:\AAA UNIVERSIDAD\3er año 2do cuatrimestre\Taller de lenguaje 2\Repotaller\tl2-tp1-2024-JavierRodriguez3\obj\Debug\net8.0\tl2-tp1-2024-JavierRodriguez3.sourcelink.json
