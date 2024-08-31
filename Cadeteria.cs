@@ -40,15 +40,23 @@ public class Cadeteria{
 
     }
 
-        public void ReasignarPedido(Pedido pedido, Cadete cadete, Cadeteria laCadeteria){
-            Console.WriteLine($"{cadete.Nombre} nombre del cadete");
-            cadete.EliminarPedido(pedido);
+        public void ReasignarPedido(Pedido pedido){
+            Cadete cadete1 = null;
 
-            Cadete nCadete = laCadeteria.ListaCadete[random.Next(laCadeteria.ListaCadete.Count)];
+            foreach (var cadete in listaCadete){
+                if(cadete.ListaPedido.Contains(pedido)){
+                    cadete1 = cadete;
+                }
+            }
+
+            Cadete nCadete = ListaCadete[random.Next(ListaCadete.Count)];
             Console.WriteLine($"{nCadete.Nombre} nombre del nuevo cadete");
 
             nCadete.AgregarPedido(pedido);
             Console.WriteLine($"El pedido fue reasigando al cadete {nCadete.Nombre}");
+
+            Console.WriteLine($"{cadete1.Nombre} nombre del cadete viejo");
+            cadete1.EliminarPedido(pedido);
         }
 
     public Pedido DarDeAltaPedido(){
