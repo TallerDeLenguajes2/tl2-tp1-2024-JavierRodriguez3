@@ -8,11 +8,13 @@ public class Cadeteria{
     private string nombre;
     private int telefono;
     private List<Cadete> listaCadete;
+    private List<Pedido> listaPedido;
     Random random = new Random();
 
     public string Nombre { get => nombre; set => nombre = value; }
     public int Telefono { get => telefono; set => telefono = value; }
     public List<Cadete> ListaCadete { get => listaCadete; set => listaCadete = value; }
+    public List<Pedido> ListaPedido { get => listaPedido; set => listaPedido = value; }
 
     public Cadeteria(){
         this.listaCadete = new List<Cadete>();
@@ -26,37 +28,36 @@ public class Cadeteria{
         this.listaCadete.Remove(cadete);
     }
 
-    public void AsignarPedido(Pedido pedido){
-        if(ListaCadete.Count == 0){
-            Console.WriteLine("No hay cadetes para asignar el pedido");
-            return;
-        }
+    public void AsignarPedido(int idCadete, int idPedido){
+        
 
-    Cadete cadete = ListaCadete[random.Next(ListaCadete.Count)];
+    var pedido = listaPedido.FirstOrDefault(x => x.NumPedido == idPedido);
+    var cadete = listaCadete.FirstOrDefault(x => x.Id == idCadete);
 
-    cadete.AgregarPedido(pedido);
-
-    Console.WriteLine($"El pedido fue asignado al cadete {cadete.Nombre}");
+    if(pedido != null && cadete != null){
+        pedido.Cadete = cadete;
+        listaPedido.Remove(pedido);
+        Console.WriteLine($"El pedido {pedido.NumPedido} fue asignado al cadete {cadete.Nombre}");
+    }
 
     }
 
-        public void ReasignarPedido(Pedido pedido){
-            Cadete cadete1 = null;
+        public void ReasignarPedido(int idPedido){
 
-            foreach (var cadete in listaCadete){
-                if(cadete.ListaPedido.Contains(pedido)){
-                    cadete1 = cadete;
-                }
-            }
+
+            var pedido1 = listaPedido.FirstOrDefault(x => x.NumPedido == idPedido);
+            
+
 
             Cadete nCadete = ListaCadete[random.Next(ListaCadete.Count)];
             Console.WriteLine($"{nCadete.Nombre} nombre del nuevo cadete");
+            
+            Console.WriteLine($"{pedido1.Cadete} nombre del cadete viejo");
 
-            nCadete.AgregarPedido(pedido);
+            pedido1.Cadete = nCadete;
             Console.WriteLine($"El pedido fue reasigando al cadete {nCadete.Nombre}");
 
-            Console.WriteLine($"{cadete1.Nombre} nombre del cadete viejo");
-            cadete1.EliminarPedido(pedido);
+            EliminarPedido(pedido1);
         }
 
     public Pedido DarDeAltaPedido(){
@@ -82,6 +83,16 @@ public class Cadeteria{
         return new Pedido(numPed, obs, cliente, Estado.Pendiente);
     }
 
+    public int JornalACobrar(int idCadete){
+        int pedidosRealizados = listaPedido.Count(x => x.Cadete.Id == idCadete);
+        return pedidosRealizados*1500;
+    }
+    public void AgregarPedido(Pedido pedido){
+        ListaPedido.Add(pedido);
+    }
 
+    public void EliminarPedido(Pedido pedido){
+        ListaPedido.Remove(pedido);
+    }
 }
 

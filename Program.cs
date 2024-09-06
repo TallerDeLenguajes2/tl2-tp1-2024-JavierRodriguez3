@@ -1,4 +1,5 @@
-﻿using Cadeterias;
+﻿using System.Runtime.InteropServices;
+using Cadeterias;
 using Cadetes;
 using Pedidos;
 
@@ -54,16 +55,13 @@ switch (opcion)
         
         break;
     case 2:
-        if (pedidosSinAsignar.Count > 0) // Cambié null check a Count check para verificar si hay elementos
-        {
-            miCadeteria.AsignarPedido(pedidosSinAsignar[0]);
-            pedidosSinAsignar.RemoveAt(0);
-            Console.WriteLine("Pedido asignado con exito");
-        }
-        else
-        {
-            Console.WriteLine("Sin pedidos para asignar");
-        }
+
+            Console.WriteLine("Ingresar el id del pedido a asignar");
+            int idPedidoRequerido1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingresar el id del Cadete a asignar el pedido");
+            int idCadeteRequerido = int.Parse(Console.ReadLine());
+            miCadeteria.AsignarPedido(idCadeteRequerido, idPedidoRequerido1);
+
         break;
     case 3:
         Console.WriteLine("Ingresar el numero del pedido a  buscar (42, 43, 44)");
@@ -98,10 +96,10 @@ switch (opcion)
 
 
         // Uso de LINQ fuera del bucle
-        Pedido pedidoEncontradoCambiar = pedidosAsignados.FirstOrDefault(c => c.NumPedido == nPedN);
+        Console.WriteLine("Ingresar el id del pedido a asignar");
+        int idPedidoRequerido = int.Parse(Console.ReadLine());
         
-        
-        miCadeteria.ReasignarPedido(pedidoEncontradoCambiar);
+        miCadeteria.ReasignarPedido(idPedidoRequerido);
 
     break;
     case 5:
@@ -113,7 +111,7 @@ switch (opcion)
                 Console.WriteLine("Nombre: " + x.Nombre);
                 Console.WriteLine("Domicilio: " + x.Direccion);
                 Console.WriteLine("Telefono: " + x.Telefono);
-                foreach (var y in x.ListaPedido)
+                foreach (var y in miCadeteria.ListaPedido)
                 {
                     Console.WriteLine("Informacion del Pedido\n");
                     Console.WriteLine("Pedido Nro: " + y.NumPedido);
