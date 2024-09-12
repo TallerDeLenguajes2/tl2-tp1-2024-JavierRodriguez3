@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Javier Rodriguez\\.nuget\\packages\\": {}
+    "C:\\Users\\Javier\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\AAAFacultad\\Taller2\\tl2-tp1-2024-JavierRodriguez3\\tl2-tp1-2024-JavierRodriguez3.csproj",
+      "projectUniqueName": "D:\\AAA UNIVERSIDAD\\3er año 2do cuatrimestre\\Taller de lenguaje 2\\Repotaller\\tl2-tp1-2024-JavierRodriguez3\\tl2-tp1-2024-JavierRodriguez3.csproj",
       "projectName": "tl2-tp1-2024-JavierRodriguez3",
-      "projectPath": "C:\\AAAFacultad\\Taller2\\tl2-tp1-2024-JavierRodriguez3\\tl2-tp1-2024-JavierRodriguez3.csproj",
-      "packagesPath": "C:\\Users\\Javier Rodriguez\\.nuget\\packages\\",
-      "outputPath": "C:\\AAAFacultad\\Taller2\\tl2-tp1-2024-JavierRodriguez3\\obj\\",
+      "projectPath": "D:\\AAA UNIVERSIDAD\\3er año 2do cuatrimestre\\Taller de lenguaje 2\\Repotaller\\tl2-tp1-2024-JavierRodriguez3\\tl2-tp1-2024-JavierRodriguez3.csproj",
+      "packagesPath": "C:\\Users\\Javier\\.nuget\\packages\\",
+      "outputPath": "D:\\AAA UNIVERSIDAD\\3er año 2do cuatrimestre\\Taller de lenguaje 2\\Repotaller\\tl2-tp1-2024-JavierRodriguez3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Javier Rodriguez\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Javier\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -18,6 +18,7 @@ public class Cadeteria{
 
     public Cadeteria(){
         this.listaCadete = new List<Cadete>();
+        this.listaPedido = new List<Pedido>();
     }
 
     public void ContratarCadete(Cadete cadete){
@@ -36,28 +37,22 @@ public class Cadeteria{
 
     if(pedido != null && cadete != null){
         pedido.Cadete = cadete;
-        listaPedido.Remove(pedido);
+
         Console.WriteLine($"El pedido {pedido.NumPedido} fue asignado al cadete {cadete.Nombre}");
     }
 
     }
 
-        public void ReasignarPedido(int idPedido){
-
-
-            var pedido1 = listaPedido.FirstOrDefault(x => x.NumPedido == idPedido);
-            
+        public void ReasignarPedido(Pedido pedidoACambiar){
 
 
             Cadete nCadete = ListaCadete[random.Next(ListaCadete.Count)];
             Console.WriteLine($"{nCadete.Nombre} nombre del nuevo cadete");
             
-            Console.WriteLine($"{pedido1.Cadete} nombre del cadete viejo");
+            //Console.WriteLine($"{pedidoACambiar.Cadete.Nombre} nombre del cadete viejo");
 
-            pedido1.Cadete = nCadete;
+            pedidoACambiar.Cadete = nCadete;
             Console.WriteLine($"El pedido fue reasigando al cadete {nCadete.Nombre}");
-
-            EliminarPedido(pedido1);
         }
 
     public Pedido DarDeAltaPedido(){
@@ -80,7 +75,7 @@ public class Cadeteria{
         string direRefClie = Console.ReadLine();
 
         var cliente = new Cliente(nombreClie, direClie, telClient, direRefClie);
-        return new Pedido(numPed, obs, cliente, Estado.Pendiente);
+        return new Pedido(numPed, obs, cliente, Estado.Pendiente, null);
     }
 
     public int JornalACobrar(int idCadete){

@@ -21,11 +21,12 @@ public class Pedido{
     public Cadete Cadete { get => cadete; set => cadete = value; }
     
 
-    public Pedido(int numPedido, string observaciones, Cliente cliente, Estado estado){
+    public Pedido(int numPedido, string observaciones, Cliente cliente, Estado estado, Cadete cadete){
         NumPedido = numPedido;
         Observaciones = observaciones;
         Estado = estado;
         Cliente = cliente;
+        Cadete = cadete;
     }
     
     public void VerDireccionCliente(Cliente cliente){

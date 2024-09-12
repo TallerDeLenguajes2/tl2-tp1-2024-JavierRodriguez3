@@ -1,11 +1,16 @@
+namespace datos;
 using Cadeterias;
-using Pedidos;
-using Clientes;
 using Cadetes;
+using System.Text.Json;
 
-public class LecturaCsv
+public abstract class AccesoADatos{
+    public abstract Cadeteria CargarCadeteria(string archivo1, string archivo2, Cadeteria miCadeteria);
+
+}
+
+public class AccesoCSV : AccesoADatos
 {
-    public static Cadeteria TraerDatosDeCsv(string archivo1, string archivo2, Cadeteria miCadeteria)
+    public override Cadeteria CargarCadeteria(string archivo1, string archivo2, Cadeteria miCadeteria)
     {
         // Leer datos de la cadetería desde el archivo CSV
         using (StreamReader archivo = new StreamReader(archivo2))
@@ -29,22 +34,50 @@ public class LecturaCsv
             {
                 string[] fila = linea.Split(separador);
 
-                // Crear instancia de Pedido con manejo seguro del estado
-
-                    // Crear o agregar pedido a la instancia de Cadete
-                    int idCadete = int.Parse(fila[0]);
-                    Cadete cadeteExistente = miCadeteria.ListaCadete.FirstOrDefault(c => c.Id == idCadete);
-                        Cadete nuevoCadete = new Cadete(idCadete, fila[1], fila[2], fila[3]);
-                        miCadeteria.ListaCadete.Add(nuevoCadete);
-
-
+                // Crear o agregar pedido a la instancia de Cadete
+                int idCadete = int.Parse(fila[0]);
+                Cadete cadeteExistente = miCadeteria.ListaCadete.FirstOrDefault(c => c.Id == idCadete);
+                Cadete nuevoCadete = new Cadete(idCadete, fila[1], fila[2], fila[3]);
+                miCadeteria.ListaCadete.Add(nuevoCadete);
             }
         }
 
         return miCadeteria;
-    }
+}
+}
 
-    public static void AgregarPedidoAlCSV(string rutaArchivo, Pedido pedido)
+
+//para el json
+
+public class AccesoJSON : AccesoADatos
+{
+    public override Cadeteria CargarCadeteria(string archivo1, string archivo2, Cadeteria miCadeteria)
+    {
+
+        try
+        {
+            string contenidoCadeteriaJson = File.ReadAllText(archivo2);
+            miCadeteria = JsonSerializer.Deserialize<Cadeteria>(contenidoCadeteriaJson) ?? miCadeteria;
+
+            string contenidoCadetesJson = File.ReadAllText(archivo1);
+            List<Cadete> cadetes = JsonSerializer.Deserialize<List<Cadete>>(contenidoCadetesJson) ?? new List<Cadete>();
+
+            // Asigno los cadetes a la cadetería
+            miCadeteria.ListaCadete = cadetes;
+        }
+        catch (JsonException ex)
+        {
+            Console.WriteLine($"Error al leer o deserializar los archivos JSON: {ex.Message}");
+        }
+
+        return miCadeteria;
+    }
+}
+
+
+
+
+    /*public static void AgregarPedidoAlCSV(string rutaArchivo, Pedido pedido)
 {
     List<string> lineas = new List<string>();
 
@@ -78,5 +111,4 @@ public class LecturaCsv
     }
 }
   //Queda como ejemplo para cargar un csv
-
-}
+*/
