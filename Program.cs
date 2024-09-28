@@ -89,7 +89,7 @@ switch (opcion)
             int idPedidoRequerido1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingresar el id del Cadete a asignar el pedido");
             int idCadeteRequerido = int.Parse(Console.ReadLine());
-            miCadeteria.AsignarPedido(idCadeteRequerido, idPedidoRequerido1);
+            bool asignado = miCadeteria.AsignarPedido(idCadeteRequerido, idPedidoRequerido1);
 
         break;
     case 3:
@@ -123,7 +123,7 @@ switch (opcion)
         Console.WriteLine("Ingresar el id del pedido a asignar");
         int idPedidoRequerido = int.Parse(Console.ReadLine());
         Pedido pedidoACambiar = miCadeteria.ListaPedido.FirstOrDefault(x => x.NumPedido == idPedidoRequerido);
-        miCadeteria.ReasignarPedido(pedidoACambiar);
+        bool reasignado = miCadeteria.ReasignarPedido(pedidoACambiar);
 
     break;
     case 5:

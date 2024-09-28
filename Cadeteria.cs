@@ -29,7 +29,7 @@ public class Cadeteria{
         this.listaCadete.Remove(cadete);
     }
 
-    public void AsignarPedido(int idCadete, int idPedido){
+    public bool AsignarPedido(int idCadete, int idPedido){
         
 
     var pedido = listaPedido.FirstOrDefault(x => x.NumPedido == idPedido);
@@ -38,21 +38,26 @@ public class Cadeteria{
     if(pedido != null && cadete != null){
         pedido.Cadete = cadete;
 
-        Console.WriteLine($"El pedido {pedido.NumPedido} fue asignado al cadete {cadete.Nombre}");
+        return true;
+    }
+        return false;
     }
 
-    }
-
-        public void ReasignarPedido(Pedido pedidoACambiar){
+        public bool ReasignarPedido(Pedido pedidoACambiar){
 
 
             Cadete nCadete = ListaCadete[random.Next(ListaCadete.Count)];
-            Console.WriteLine($"{nCadete.Nombre} nombre del nuevo cadete");
+
+            if (nCadete == null){
+                return false;
+            }
+            
             
             //Console.WriteLine($"{pedidoACambiar.Cadete.Nombre} nombre del cadete viejo");
 
             pedidoACambiar.Cadete = nCadete;
-            Console.WriteLine($"El pedido fue reasigando al cadete {nCadete.Nombre}");
+            
+            return true;
         }
 
     public Pedido DarDeAltaPedido(){

@@ -29,12 +29,14 @@ public class Pedido{
         Cadete = cadete;
     }
     
-    public void VerDireccionCliente(Cliente cliente){
-        Console.WriteLine($"La direccion del cliente es {cliente.Direccion}");
+    public string  VerDireccionCliente(Cliente cliente){
+        
+        return cliente.Direccion;
     }
 
-    public void VerDatosCliente(Cliente Cliente){
-        Console.WriteLine($"El nombre del cliente es: {cliente.Nombre}\nEl telefono del cliente es: {cliente.Telefono}\nLa referencia de la direccion del cliente es: {cliente.ReferenciaDireccion}");
+    public string VerDatosCliente(Cliente cliente){
+        
+        return cliente.Nombre+", "+cliente.Telefono+", "+cliente.ReferenciaDireccion;
     }
 
     
